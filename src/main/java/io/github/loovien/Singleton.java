@@ -68,4 +68,23 @@ public class Singleton {
         }
 
     }
+
+    /**
+     * 枚举单例
+     */
+    public enum SingletonEnum {
+
+        INSTANCE("im a singleton");
+
+        private String message;
+
+        SingletonEnum(String s) {
+            this.message = s;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+    }
+
 }
