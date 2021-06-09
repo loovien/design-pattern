@@ -27,7 +27,11 @@ public class ChainOfResponsibility {
 
             System.out.println("=======html filter ==========");
             String replace = s.replace("<", "#").replace(">", "#");
-            return fc.next(replace);
+            String next = fc.next(replace);
+
+            System.out.println("============= html filter ending==============");
+
+            return next;
         }
     }
 
@@ -38,7 +42,11 @@ public class ChainOfResponsibility {
 
             System.out.println("======= word filter ==========");
             String s1 = s.toUpperCase(Locale.ROOT);
-            return fc.next(s1);
+            String next = fc.next(s1);
+
+            System.out.println("============ word filter ending ===========");
+
+            return next;
         }
     }
 
